@@ -196,7 +196,7 @@ char vfoActive = VFO_A;
 int8_t meter_reading = 0; // a -1 on meter makes it invisible
 unsigned long vfoA=7150000L, vfoB=14200000L, sideTone=800, usbCarrier;
 unsigned long frequency, ritRxFrequency, ritTxFrequency;  //frequency is the current frequency on the dial
-
+unsigned long catClarifierFreq = 0;
 int cwSpeed = 100; //this is actuall the dot period in milliseconds
 extern int32_t calibration;
 
@@ -215,6 +215,7 @@ unsigned long dbgCount = 0;   //not used now
 unsigned char txFilter = 0;   //which of the four transmit filters are in use
 boolean modeCalibrate = false;//this mode of menus shows extended menus to calibrate the oscillators and choose the proper
                               //beat frequency
+unsigned char panelLock = 0;                              
 /**
  * Below are the basic functions that control the uBitx. Understanding the functions before 
  * you start hacking around
